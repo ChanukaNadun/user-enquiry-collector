@@ -7,8 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+// This is mage connection with database -- And also get appsettings.json ConnectionStrings for here
 builder.Services.AddDbContext<EnquiryDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("EnquiryConn")));
+// -------------------------------------
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

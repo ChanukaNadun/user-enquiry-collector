@@ -8,5 +8,11 @@ namespace EnquiryAPI.Model
         {
 
         }
+
+        // connect Database Table with Models
+
+        public DbSet<EnquiryStatus> EnquiryStatus { get; set; }
+        public DbSet<EnquiryType> EnquiryType { get; set; }
+        public DbSet<EnquiryModel> EnquiryModel { get; set; }
     }
 }

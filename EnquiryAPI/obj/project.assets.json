@@ -5165,11 +5165,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studies\\.Net base Projects\\EnquiryAPI\\EnquiryAPI\\EnquiryAPI.csproj",
+      "projectUniqueName": "D:\\Studies\\.Net base Projects\\EnquiryAPI\\user-enquiry-collector\\EnquiryAPI\\EnquiryAPI.csproj",
       "projectName": "EnquiryAPI",
-      "projectPath": "D:\\Studies\\.Net base Projects\\EnquiryAPI\\EnquiryAPI\\EnquiryAPI.csproj",
+      "projectPath": "D:\\Studies\\.Net base Projects\\EnquiryAPI\\user-enquiry-collector\\EnquiryAPI\\EnquiryAPI.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Studies\\.Net base Projects\\EnquiryAPI\\EnquiryAPI\\obj\\",
+      "outputPath": "D:\\Studies\\.Net base Projects\\EnquiryAPI\\user-enquiry-collector\\EnquiryAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

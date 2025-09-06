@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "tzwVdoxA+1TTBu1gqSBqQKcvqvqzE2g4tf4iYSIpzSM=",
+  "Source": "EnquiryAPI",
+  "BasePath": "_content/EnquiryAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
