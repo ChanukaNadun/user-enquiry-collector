@@ -7,6 +7,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("allowCors", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();  
+    });
+});
+
 // This is mage connection with database -- And also get appsettings.json ConnectionStrings for here
 builder.Services.AddDbContext<EnquiryDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("EnquiryConn")));
@@ -18,6 +29,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("allowCors");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

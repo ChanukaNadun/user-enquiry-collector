@@ -1,12 +1,16 @@
 ﻿using System.Diagnostics.Eventing.Reader;
+using Azure;
 using EnquiryAPI.Model;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EnquiryAPI.Controllers
 {
+    [EnableCors("allowCors")]
     [Route("api/[controller]")]
     [ApiController]
+    
     public class EnquiryMasterController : ControllerBase
     {
         private readonly EnquiryDbContext _context;
@@ -37,10 +41,17 @@ namespace EnquiryAPI.Controllers
         [HttpPost("CreateNewEnquiry")]
         public EnquiryModel AddNewEnquiry(EnquiryModel obj)
         {
-            obj.createdDate = DateTime.Now;
-            _context.EnquiryModel.Add(obj);
-            _context.SaveChanges();
-            return obj;
+            //try {
+                obj.createdDate = DateTime.Now;
+                _context.EnquiryModel.Add(obj);
+                _context.SaveChanges();
+                return obj;
+            //}
+            //catch ()
+            //{
+            //    throw;
+            //}
+            
         }
 
         [HttpPut("UpdateEnquiry")]
